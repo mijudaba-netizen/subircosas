@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1110">
+  <title>Journey de Reactivación Turbo</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1110;--panel:#111a18;--panel2:#151f1c;--line:#263430;--muted:#91a39b;--text:#edf5f0;--green:#a7ed72;--mint:#63d8b0;--amber:#f3c779;--red:#fa8585;--shadow:0 18px 54px #0005}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 52% -20%,#18332a 0,transparent 45%),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    button{font:inherit;color:inherit}.shell{max-width:1200px;margin:auto;padding:34px 28px 70px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:54px}.brand{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#dceae2}.brandmark{width:34px;height:34px;border-radius:11px;background:linear-gradient(145deg,#c2ff86,#49d0a2);display:grid;place-items:center;color:#0c2118;font-weight:900;font-size:18px;box-shadow:0 5px 22px #63d8b044}.actions{display:flex;gap:9px}.btn{border:1px solid #35443e;background:#121a18;border-radius:10px;padding:9px 13px;color:#c9d8d0;cursor:pointer;transition:.18s}.btn:hover{border-color:#6d8e7d;background:#192520}.btn.primary{border-color:#8cce68;background:#a7ed72;color:#172416;font-weight:700}.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:750}.hero{max-width:800px;margin-bottom:30px}.hero h1{font-size:clamp(34px,5vw,56px);letter-spacing:-.045em;line-height:1.05;margin:12px 0 16px}.hero p{max-width:690px;color:#adbbb4;font-size:16px;margin:0}.summary{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:12px;margin:30px 0 34px}.summary-card{border:1px solid var(--line);border-radius:14px;background:#111a18d9;padding:16px 18px;min-height:91px}.summary-card .label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.summary-card strong{display:block;margin-top:6px;font-size:20px;letter-spacing:-.02em}.summary-card.featured{background:linear-gradient(135deg,#1a3328,#14211d);border-color:#456446}.summary-card.featured strong{color:var(--green)}
+    .eligibility{border:1px solid #34483f;border-radius:18px;background:linear-gradient(135deg,#131f1b,#101715);padding:23px;margin:0 0 34px;box-shadow:var(--shadow)}.section-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:17px}.section-head h2{font-size:18px;margin:0 0 4px}.section-head p{margin:0;color:var(--muted);font-size:13px}.tag{border:1px solid #3a4a43;border-radius:999px;padding:5px 9px;color:#bdcdc4;font-size:11px;white-space:nowrap}.eligibility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.elig-card{border-radius:12px;padding:15px;background:#18231f;border:1px solid #2e4038}.elig-card .symbol{font-weight:800;font-size:12px;letter-spacing:.08em;color:var(--mint)}.elig-card h3{font-size:14px;margin:7px 0 3px}.elig-card p{font-size:12px;color:#9fb0a7;margin:0}.elig-card.exclude{border-color:#503637;background:#211819}.elig-card.exclude .symbol{color:var(--red)}.elig-card.route{border-color:#47533c;background:#1d2118}.elig-card.route .symbol{color:var(--amber)}
+    .journey-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:14px}.journey-head h2{font-size:22px;margin:0}.journey-head p{color:var(--muted);font-size:13px;margin:4px 0 0}.tabs{display:flex;gap:6px;padding:5px;border:1px solid #293933;background:#111a17;border-radius:12px}.tab{border:0;background:transparent;color:#9eafa6;padding:9px 13px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:650}.tab[aria-selected="true"]{background:#a7ed72;color:#172416}.track-meta{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 17px;margin:14px 0 24px;border:1px solid #293a33;border-radius:12px;background:#101815}.track-meta strong{font-size:14px}.track-meta span{color:var(--muted);font-size:12px}.timeline{position:relative;padding:4px 0 4px 30px}.timeline:before{content:"";position:absolute;left:10px;top:14px;bottom:36px;width:1px;background:linear-gradient(var(--green),#456853 65%,#734d45)}.step{position:relative;margin:0 0 13px 0}.step:before{content:"";position:absolute;left:-25px;top:24px;width:9px;height:9px;border-radius:50%;background:var(--green);border:3px solid #19231f;box-shadow:0 0 0 1px #7ba971}.step:last-of-type:before{background:var(--amber);box-shadow:0 0 0 1px #ab8050}.step details{border:1px solid #2a3933;border-radius:15px;background:linear-gradient(135deg,#141e1b,#111815);overflow:hidden;transition:border-color .2s}.step details[open],.step details:hover{border-color:#4b6855}.step summary{list-style:none;cursor:pointer;padding:17px 19px;display:grid;grid-template-columns:76px minmax(0,1fr) auto;align-items:center;gap:15px}.step summary::-webkit-details-marker{display:none}.day{border:1px solid #435446;background:#1c2a21;color:var(--green);padding:6px 9px;border-radius:9px;text-align:center;font-weight:750;font-size:12px;white-space:nowrap}.step-title{font-weight:680;font-size:15px;line-height:1.35}.channel{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#9cb0a5;margin-top:4px}.chevron{color:#72867a;transition:transform .2s}.step details[open] .chevron{transform:rotate(180deg)}.details{padding:0 19px 18px 110px}.details p{color:#aab9b1;font-size:13px;margin:0 0 14px}.decision{display:flex;align-items:stretch;gap:10px}.outcome{flex:1;border-radius:11px;padding:11px 13px;border:1px solid #345243;background:#14221a}.outcome b{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mint);margin-bottom:3px}.outcome span{font-size:12px;color:#d1ded6}.outcome.continue{border-color:#35483b;background:#171f18}.outcome.continue b{color:var(--green)}.outcome.exit{border-color:#63463d;background:#211b18}.outcome.exit b{color:var(--amber)}.outcome.review{border-color:#5a4c36;background:#211f18}.outcome.review b{color:var(--amber)}.review-note{margin:18px 0 0;border:1px solid #56482f;background:#211e16;color:#d9c79f;border-radius:12px;padding:13px 15px;font-size:12px}.review-note strong{color:#f3d28a}.endcap{margin:20px 0 0 30px;border:1px solid #5e4b32;background:linear-gradient(115deg,#241f17,#171914);border-radius:14px;padding:16px 18px;display:flex;align-items:center;gap:13px}.end-icon{width:33px;height:33px;display:grid;place-items:center;background:#44351e;border-radius:10px;color:var(--amber);font-weight:850}.endcap strong{font-size:14px}.endcap p{margin:2px 0 0;color:#acb1a5;font-size:12px}.footer{margin-top:42px;border-top:1px solid #25332e;padding-top:17px;display:flex;justify-content:space-between;gap:16px;color:#81938a;font-size:11px}.hidden{display:none!important}
+    @media(max-width:760px){.shell{padding:20px 16px 48px}.topbar{margin-bottom:38px}.summary{grid-template-columns:repeat(2,1fr)}.summary-card:first-child{grid-column:span 2}.eligibility-grid{grid-template-columns:1fr}.journey-head{align-items:flex-start;flex-direction:column}.tabs{width:100%}.tab{flex:1;padding:9px 7px;font-size:12px}.track-meta{align-items:flex-start;flex-direction:column}.step summary{grid-template-columns:64px minmax(0,1fr) 14px;gap:10px;padding:14px}.details{padding:0 14px 15px}.decision{flex-direction:column}.timeline{padding-left:25px}.timeline:before{left:7px}.step:before{left:-22px}.footer{flex-direction:column}.actions .btn{padding:8px 10px;font-size:12px}}
+    @media print{body{background:#fff;color:#1a2420}.shell{max-width:none;padding:0}.topbar,.actions,.tabs,.chevron{display:none!important}.hero p,.section-head p,.summary-card .label,.elig-card p,.track-meta span,.details p,.outcome span,.footer{color:#46564d}.summary-card,.eligibility,.elig-card,.track-meta,.step details,.endcap{background:#fff;border-color:#aebbb3;box-shadow:none}.summary-card strong,.step-title,.section-head h2,.elig-card h3,.track-meta strong,.endcap strong{color:#1d2c24}.eligibility-grid{grid-template-columns:repeat(3,1fr)}.timeline{break-inside:avoid}.step details:not([open]) .details{display:block}.step summary{padding:10px}.step{break-inside:avoid}.details{padding-bottom:11px}.endcap{break-inside:avoid}.review-note{color:#564820;background:#fff}.journey-head{margin-top:20px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brandmark">T</span> Turbo · Lifecycle</div>
+      <div class="actions"><button class="btn" id="expandBtn" type="button">Expandir pasos</button><button class="btn" id="printBtn" type="button">Imprimir / PDF</button></div>
+    </header>
+    <section class="hero">
+      <div class="eyebrow">Customer journey · Reactivación</div>
+      <h1>Reactivar. Recordar.<br><span style="color:var(--green)">Volver a Turbo.</span></h1>
+      <p>Secuencia de comunicaciones para recuperar usuarios de Turbo, con una ruta específica para usuarios sin orden reciente y otra para quienes ya hicieron una primera orden.</p>
+    </section>
+    <section class="summary" aria-label="Resumen del journey">
+      <div class="summary-card featured"><div class="label">Journey</div><strong>Reactivación Turbo</strong></div>
+      <div class="summary-card"><div class="label">Rutas de contacto</div><strong>2 segmentos</strong></div>
+      <div class="summary-card"><div class="label">Ventana máxima</div><strong>30 días</strong></div>
+      <div class="summary-card"><div class="label">Evento de salida</div><strong>Orden Turbo</strong></div>
+    </section>
+    <section class="eligibility" aria-labelledby="elig-title">
+      <div class="section-head"><div><h2 id="elig-title">Entrada y elegibilidad</h2><p>La cantidad de órdenes determina la ruta que sigue cada usuario.</p></div><span class="tag">Inicio del journey</span></div>
+      <div class="eligibility-grid">
+        <article class="elig-card"><div class="symbol">0 ÓRDENES RECIENTES</div><h3>Ruta de reactivación</h3><p>Comienza con educación sobre la vertical Turbo y sus beneficios.</p></article>
+        <article class="elig-card route"><div class="symbol">1 ORDEN</div><h3>Ruta de segunda orden</h3><p>Incentiva una nueva compra con mensajes y ventajas progresivas.</p></article>
+        <article class="elig-card exclude"><div class="symbol">MÁS DE 1 ORDEN</div><h3>Sale del journey</h3><p>Se excluye de esta secuencia según la condición del diagrama original.</p></article>
+      </div>
+    </section>
+    <section aria-labelledby="flow-title">
+      <div class="journey-head"><div><div class="eyebrow">Línea de tiempo</div><h2 id="flow-title">Comunicaciones y decisiones</h2><p>Abre cada paso para ver el resultado y la siguiente acción.</p></div>
+        <div class="tabs" role="tablist" aria-label="Seleccionar ruta"><button class="tab" id="tab-noorder" role="tab" aria-selected="true" aria-controls="track-noorder">Sin orden reciente</button><button class="tab" id="tab-oneorder" role="tab" aria-selected="false" aria-controls="track-oneorder">Una orden</button></div>
+      </div>
+      <div id="track-noorder" class="track" role="tabpanel" aria-labelledby="tab-noorder"><div class="track-meta"><strong>Ruta A · Sin orden reciente</strong><span>11 contactos · Día 1 a Día 30</span></div><div class="timeline" id="timeline-noorder"></div><div class="endcap"><span class="end-icon">R</span><div><strong>Último recurso · RCS</strong><p>Si no realiza una orden después del contacto del Día 30, enviar RCS como última opción.</p></div></div></div>
+      <div id="track-oneorder" class="track hidden" role="tabpanel" aria-labelledby="tab-oneorder"><div class="track-meta"><strong>Ruta B · Una orden</strong><span>7 contactos · Día 1 a Día 30</span></div><div class="timeline" id="timeline-oneorder"></div><div class="endcap"><span class="end-icon">R</span><div><strong>Último recurso · RCS</strong><p>Si no realiza una orden después del contacto del Día 30, enviar RCS como última opción.</p></div></div></div>
+      <div class="review-note"><strong>Definición pendiente:</strong> el diagrama fuente usa “¿Funcionó?” y “vuelve a entrar al flujo”. Aquí se expresa como “¿Realizó una orden Turbo?” para aclarar la intención; el destino exacto de reingreso y la ventana de atribución deben confirmarse antes de configurar la automatización.</div>
+    </section>
+    <footer class="footer"><span>Journey de Reactivación Turbo · Versión editable</span><span>Los textos de campaña se pueden modificar en los datos del archivo index.html.</span></footer>
+  </main>
+  <script>
+    // EDITA ESTE ARREGLO para cambiar días, canal, mensaje o descripción. No requiere dependencias externas.
+    const journeys = {
+      noorder: [
+        {day:1,channel:"Email",title:"Mail informativo: cómo usar Turbo",desc:"Explicar cómo usar la vertical y dónde encontrarla dentro de la app."},
+        {day:4,channel:"Push",title:"Beneficios y diferenciación",desc:"Push informativo sobre los beneficios de Turbo y qué lo hace diferente."},
+        {day:7,channel:"Push",title:"Explorar las opciones de Turbo",desc:"Invitar al usuario a conocer las distintas opciones disponibles en Turbo Restaurantes."},
+        {day:10,channel:"In-app",title:"Recomendación y navegación",desc:"Recomendar productos o servicios y facilitar la navegación o el acceso a información."},
+        {day:13,channel:"In-app / oferta",title:"Acción base y créditos",desc:"El original menciona una acción base y carga de créditos (versión Turbo Restaurantes); validar el nombre exacto de esta mecánica."},
+        {day:16,channel:"Push",title:"Mejores productos de Turbo Restaurantes",desc:"Dirigir un push a los mejores productos de Turbo Restaurantes."},
+        {day:19,channel:"In-app / dinámica",title:"Mostrar dinámicas disponibles",desc:"Mostrar distintas dinámicas promocionales (el texto de origen menciona “15 d o etc.”; validar el detalle)."},
+        {day:22,channel:"Experiencia en app",title:"Día Turbo",desc:"Enfocar la app en Turbo con una temática especial."},
+        {day:25,channel:"Cupón",title:"Cupón con temporizador",desc:"Cupones con temporizadores de 15 minutos, simulando la entrega."},
+        {day:28,channel:"WhatsApp",title:"WhatsApp informativo / viral",desc:"Último contacto por WhatsApp, descrito en el original como informativo o viral."},
+        {day:30,channel:"Push",title:"Recordatorio del tiempo sin ordenar",desc:"Push que recuerda cuánto tiempo ha pasado desde la última orden en Turbo Restaurantes."}
+      ],
+      oneorder: [
+        {day:1,channel:"Push",title:"Motivar la segunda orden",desc:"Push para fomentar la segunda orden en Turbo; el original sugiere personalizarlo con el tiempo que tardó la primera orden."},
+        {day:3,channel:"Push",title:"Reordenar en el mismo restaurante",desc:"Push de reorden en el restaurante de la primera compra."},
+        {day:7,channel:"Push",title:"Más opciones en Turbo",desc:"Mostrar más opciones de restaurantes disponibles en Turbo."},
+        {day:14,channel:"Comparativo",title:"Comparar órdenes y beneficios",desc:"Comparar órdenes de Full Service con lo que el usuario pudo haber pedido en Turbo."},
+        {day:21,channel:"Experiencia en app",title:"Día Turbo",desc:"Enfocar la app en Turbo con una temática especial."},
+        {day:25,channel:"Beneficio de entrega",title:"Prioridad de entrega",desc:"Comunicar prioridad de entrega en la segunda orden."},
+        {day:30,channel:"Push",title:"Días sin pedir en Turbo",desc:"Recordatorio personalizado: “Llevas X días sin pedir en Turbo”."}
+      ]
+    };
+    function renderTrack(key,targetId){
+      const target=document.getElementById(targetId);
+      target.innerHTML=journeys[key].map((item,index)=>`<article class="step"><details ${index===0?"open":""}><summary><span class="day">Día ${item.day}</span><span><span class="step-title">${item.title}</span><span class="channel">${item.channel}</span></span><span class="chevron">⌄</span></summary><div class="details"><p>${item.desc}</p><div class="decision"><div class="outcome exit"><b>Sí · Orden Turbo</b><span>Sale del journey de reactivación.</span></div><div class="outcome continue"><b>No · Sin orden</b><span>${index<journeys[key].length-1?`Continúa al Día ${journeys[key][index+1].day}.`:"Continúa a RCS como último recurso."}</span></div></div></div></details></article>`).join("");
+    }
+    renderTrack("noorder","timeline-noorder");renderTrack("oneorder","timeline-oneorder");
+    const tabs=[document.getElementById("tab-noorder"),document.getElementById("tab-oneorder")];
+    tabs.forEach((tab,i)=>tab.addEventListener("click",()=>{tabs.forEach((t,j)=>t.setAttribute("aria-selected",String(i===j)));document.getElementById("track-noorder").classList.toggle("hidden",i!==0);document.getElementById("track-oneorder").classList.toggle("hidden",i!==1)}));
+    document.getElementById("printBtn").addEventListener("click",()=>window.print());
+    document.getElementById("expandBtn").addEventListener("click",e=>{const track=document.querySelector(".track:not(.hidden)");const ds=[...track.querySelectorAll("details")];const expand=ds.some(d=>!d.open);ds.forEach(d=>d.open=expand);e.currentTarget.textContent=expand?"Contraer pasos":"Expandir pasos"});
+  </script>
+</body>
+</html>
